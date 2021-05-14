@@ -18,9 +18,12 @@ class homescreen extends StatelessWidget {
 class myhomescreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: country(
-          page: 'I', url: 'https://wallpaperaccess.com/full/4455652.jpg'),
+    return Column(
+      children: [
+        country(page: 'I', url: 'https://wallpaperaccess.com/full/4455652.jpg'),
+        country(page: 'U', url: 'https://i.imgur.com/07qDwFS.jpg'),
+
+      ],
     );
   }
 }
@@ -37,7 +40,7 @@ class country extends StatelessWidget {
       },
       child: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Hero(tag:'logo',child: Image.network(url)),
+        child: Hero(tag:'logo$page',child: Image.network(url)),
       ),
     );
   }

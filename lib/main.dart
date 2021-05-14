@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'homeFile.dart';
 import 'indianFile.dart';
+import 'usaFile.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -8,6 +9,7 @@ void main() {
     routes: {
       'H':(context)=>homescreen(),
       'I':(context)=>indiannews(),
+      'U':(context)=>usanews(),
     },
     debugShowCheckedModeBanner: false,
   ));

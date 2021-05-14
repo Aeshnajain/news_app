@@ -3,16 +3,16 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'package:url_launcher/url_launcher.dart';
 
-class indiannews extends StatelessWidget {
+class usanews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(
-        color: Color(0xFFFBF8BE),
+          color: Color(0xFFFBF8BE),
         ),
         title: Text(
-          "INDIAN_NEWS",
+          "USA_NEWS",
           style: TextStyle(color: Color(0xFFFBF8BE)),
         ),
         centerTitle: true,
@@ -40,7 +40,7 @@ class _myAppState extends State<myApp> {
 
   void getData() async {
     var myresponse = await http.get(Uri.parse(
-        'https://newsapi.org/v2/top-headlines?country=in&apiKey=f563aa5da89844eca63093d836e70b22'));
+        'https://newsapi.org/v2/top-headlines?country=us&apiKey=f563aa5da89844eca63093d836e70b22'));
     if (myresponse.statusCode == 200) {
       String data = myresponse.body;
       //print(data);
@@ -55,7 +55,7 @@ class _myAppState extends State<myApp> {
             child: Text(
               headline,
               style: TextStyle(
-                   color: Color(0xFFFBF8BE),
+                  color: Color(0xFFFBF8BE),
                   fontWeight: FontWeight.bold,
                   fontSize: 20),
             ),
@@ -68,7 +68,7 @@ class _myAppState extends State<myApp> {
         mylist.add(ElevatedButton(
             style: ElevatedButton.styleFrom(primary:Color(0xFF234E70),),
             onPressed: () {
-               _launchURL(nurl);
+              _launchURL(nurl);
             },
             child: Text('READ_MORE',style: TextStyle(color: Color(0xFFFBF8BE),),))
         );
@@ -97,9 +97,9 @@ class _myAppState extends State<myApp> {
               child: Row(
                 children: [
                   Hero(
-                      tag: 'logoI',
+                      tag: 'logoU',
                       child: Image.network(
-                        'https://wallpaperaccess.com/full/4455652.jpg',
+                        'https://i.imgur.com/07qDwFS.jpg',
                         width: 50,
                         height: 50,
                       )),
